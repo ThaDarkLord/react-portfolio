@@ -1,14 +1,16 @@
 import { Outlet } from 'react-router-dom';
-import Header from './components/Header'; 
-
+import HeaderSet from './components/Header'; 
+import Footer from './components/Footer'
+// import HeaderSet from './components/Header';
 function App(){
   return (
     <>
 
-    <Header />
+    <HeaderSet />
+    <main className='mx-3'>
     <Outlet />
-    
-    
+    </main>
+    <Footer />
     </>
     
   );

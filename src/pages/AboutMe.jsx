@@ -1,13 +1,15 @@
-
+import MyPhoto from "../assets/img/me.png"
 
 export default function AboutMe (){
     return(
         <div className="main-container">
-            <div className="row" style={{ backgroundColor: "orange", margin: "1rem" }}>
-            <h1>About</h1>
+            <div className="col row" style={{ backgroundColor: "green", padding: '' }}>
+            <h3>A little about me</h3>
+
+                <img src={MyPhoto} style={{maxWidth: '15%', borderRadius: "60rem"}} alt="picture of Daniel" className="col"></img>
             <p className="col">Hello there, 
                 <br />
-                 Daniel Sykes is the name and this is my portfolio! I am a 31 year old rookie developer looking to continue exploring and expanding knowledge in the coding community. I am passionate about sports and fitness. I enjoy coding because it allows me to challenege and apply my knowledge base. I love finding tough projects that make you scratch your head. Thank you for chekcing out my page!
+                 Daniel Sykes is the name. welcome my portfolio! I am a 31 year old rookie developer looking to continue exploring and expanding knowledge in the coding community. I am passionate about sports and fitness. I enjoy coding because it allows me to challenege and apply my knowledge.
                  <br/>
                  <br/>
 
