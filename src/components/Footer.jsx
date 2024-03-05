@@ -1,3 +1,5 @@
+import '../assets/styles/footer.css'
+
 export default function Footer (){
     return (
        <footer style={{backgroundColor: "black"}}>

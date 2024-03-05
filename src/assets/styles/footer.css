@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    /* bottom: 0; */
+    width: 100%;
+    text-align: center;
+}
+
+a{
+    margin: 1rem;
+    color: white;
+    
+}
+
+.mx-3{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+}

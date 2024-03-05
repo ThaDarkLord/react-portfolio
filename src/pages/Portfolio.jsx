@@ -48,7 +48,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <ul>
+    <ul className="portul">
       {projects.map((project) => {
         return <ProjectCard cards={project} key={project.title}/>;
       })}

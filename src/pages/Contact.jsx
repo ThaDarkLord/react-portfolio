@@ -1,6 +1,6 @@
 export default function Contact (){
     return(
-        <div className="main-container"style={{margin: "5rem"}}>
+        <div className="main-container">
             <div className="mb-3" >
   <label htmlFor="exampleFormControlInput1" className="form-label">Name</label>
   <input type="text" className="form-control" placeholder="Enter Your Name Here" />
