@@ -1,21 +1,86 @@
-export default function Contact (){
+import { validateEmail } from '../../utils.js/helper';
+import '../assets/styles/contact.css'
+import { useState } from 'react';
+export default function Form(){
+const [userName , setuserName] = useState('');
+const [email, setEmail] = useState('');
+const [message, setMessage] = useState('');
+const [errorMessage, setErrorMessage] = useState('');
+
+const handleInputChange = (event)  =>{
+  console.log(event)
+  const { target } = event;
+const name = event.target.name;
+const value = event.target.value;
+
+if (name === 'Name') {
+  setuserName(value)
+} else if (name === 'Email') {
+  setEmail(value)
+} else {
+  setMessage(value)
+}
+}
+
+
+const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    if (!name) {
+      setErrorMessage(
+        `Please enter a name`
+      )
+    } else if (!validateEmail(email)){
+      setErrorMessage(` Please provide a valid email to continue!`)
+      return;
+    }else if (!message){
+      setErrorMessage(`A message must be provided to continue`)
+      return;
+    }
+
+    setuserName('');
+    setEmail('');
+    setMessage('');
+
+    return
+}
     return(
-        <div className="main-container">
-            <div className="mb-3" >
-  <label htmlFor="exampleFormControlInput1" className="form-label">Name</label>
-  <input type="text" className="form-control" placeholder="Enter Your Name Here" />
-</div>
-            <div className="mb-3">
-  <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-  <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-</div>
-<div className="mb-3">
-  <label htmlFor="exampleFormControlTextarea1" className="form-label">Please, enter your message here!</label>
-  <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  <div className="col-auto">
-    <button type="submit" className="btn btn-primary mb-3">Submit</button>
-  </div>
-</div>
+      <div className="container text-center">
+      <h2>
+        Contact me
+      </h2>
+      <form className="form" onSubmit={handleFormSubmit}>
+        <input
+          value={userName}
+          name="name1"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="First and Last name please!"
+        />
+        <input
+          value={email}
+          name="mail"
+          onChange={handleInputChange}
+          type="email"
+          placeholder="Input your email here"
+        />
+         <input
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="What would you like to say ?"
+        />
+        <button type="submit">
+          Submit
+        </button>
+        {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
         </div>
+      )}
+      </form>
+    </div>
     )
 }
+

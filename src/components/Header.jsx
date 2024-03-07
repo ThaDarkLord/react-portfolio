@@ -17,19 +17,19 @@ export default function HeaderSet(){
         <li className="nav-item">
         <Link 
           to="/portfolio"
-          className={currentPage === '/portfolio' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
         ><div className='text'>Portfolio</div></Link>
         </li>
         <li className="nav-item">
         <Link
           to="/resume"
-          className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Resume' ? 'nav-link active' : 'nav-link'}
         ><div className='text'>Resume</div></Link>
         </li>
         <li className="nav-item">
         <Link
           to="/contact"
-          className={currentPage === '/contact' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Contact' ? 'nav-link active' : 'nav-link'}
         ><div className='text'>Contact</div></Link>
         </li>
       </ul>
