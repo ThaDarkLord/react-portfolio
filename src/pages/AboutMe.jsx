@@ -2,12 +2,12 @@ import MyPhoto from "../assets/img/me.png"
 import '../assets/styles/aboutme.css';
 export default function AboutMe (){
     return(
-        <div class="container text-left">
-        <div class="row">
-          <div class="col">
+        <div className="container">
+        <div className="row">
+          <div className="col-4 leftSide">
             <img src={MyPhoto} alt="picture of Daniel" className="imgpic col"></img>
           </div>
-          <div class="col">
+          <div className="col-8">
           Hello there, 
         <br />
          Daniel Sykes is the name. welcome my portfolio! I am a 31 year old rookie developer looking to continue exploring and expanding knowledge in the coding community. I am passionate about sports and fitness. I enjoy coding because it allows me to challenege and apply my knowledge.
